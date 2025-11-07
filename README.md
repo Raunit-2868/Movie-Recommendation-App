@@ -1,5 +1,5 @@
 # 🎬 MovieFlix & Chill
-**AI-Powered Movie Recommender**  
+**Movie Recommender**  
 [🔗 Live Site](https://movie-flix-chill.vercel.app/)
 
 ![UI Screenshot](./screenshot.png)
@@ -10,7 +10,7 @@ Discover your next favorite film with ease. Powered by AI and real-time data, **
 ---
 
 ## 🚀 Features
-- **AI-Powered Recommendations** – Discover movies tailored to your taste
+- **Trending Recommendations** – Discover movies that people are searching about
 - **Infinite Scroll Search** – Seamlessly browse through endless movie results
 - **Trailer Playback** – Watch movie trailers directly in the app
 - **Debounced Search** – Optimized search without API flooding
@@ -58,23 +58,7 @@ Discover your next favorite film with ease. Powered by AI and real-time data, **
 - **Explore Trends**: Browse what's currently popular
 - **Detailed Info**: View ratings, descriptions, and release dates
 
----
 
-## 🐛 Known Issues
-- Top 20 Movies feature disabled due to CORS limitations
-- Rate limiting during peak TMDB API usage
-
----
-
-## 🔮 Roadmap
-- Fix CORS for Top 20 Movies
-- User accounts & watchlists
-- Mood-based recommendations
-- Dark mode toggle
-- PWA support
-- Multi-language interface
-
----
 
 ## 🤝 Contributing
 1. Fork the repo
