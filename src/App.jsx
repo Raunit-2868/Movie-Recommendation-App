@@ -51,12 +51,15 @@ const App = () => {
   useEffect(() => {
     const handleKeyDown = (event) => {
       // Check if "/" is pressed and we're not already in an input field
-      if (event.key === "/" && !["INPUT", "TEXTAREA"].includes(event.target.tagName)) {
+      if (
+        event.key === "/" &&
+        !["INPUT", "TEXTAREA"].includes(event.target.tagName)
+      ) {
         event.preventDefault(); // Prevent "/" from being typed
         searchRef.current?.focus();
       }
 
-      // Optional: ESC to blur the search input
+      //  ESC to blur the search input
       if (event.key === "Escape" && event.target === document.activeElement) {
         event.target.blur();
       }
@@ -97,7 +100,9 @@ const App = () => {
 
     try {
       const endpoint = query
-        ? `${API_BASE_URL}/search/movie?query=${encodeURIComponent(query)}&page=${pageNum}`
+        ? `${API_BASE_URL}/search/movie?query=${encodeURIComponent(
+            query,
+          )}&page=${pageNum}`
         : `${API_BASE_URL}/discover/movie?sort_by=popularity.desc&page=${pageNum}`;
 
       const response = await fetch(endpoint, API_OPTIONS);
@@ -215,7 +220,11 @@ const App = () => {
             Find The <span className="text-gradient">Movies</span> That You'll
             Enjoy Without Hassle
           </h1>
-          <Search ref={searchRef} search={searchTerm} setSearchTerm={setSearchTerm} />
+          <Search
+            ref={searchRef}
+            search={searchTerm}
+            setSearchTerm={setSearchTerm}
+          />
         </header>
 
         {trendingMovies.length > 0 && (

@@ -23,8 +23,8 @@ html, body {
 @theme {
   --color-primary: #030014;
 
-  --color-light-100: #cecefb;
-  --color-light-200: #a8b5db;
+  --color-light-100: #E6E6FA; /* Soft lavender */
+  --color-light-200: #D8BFD8; /* Lighter lavender (thistle) */
 
   --color-gray-100: #9ca4ab;
 
@@ -160,11 +160,11 @@ html, body {
 }
 
 @utility text-gradient {
-  @apply bg-linear-to-r from-[#D6C7FF] to-[#AB8BFF] bg-clip-text text-transparent;
+  @apply bg-linear-to-r from-[#E6E6FA] to-[#D8BFD8] bg-clip-text text-transparent;
 }
 
 @utility fancy-text {
-  -webkit-text-stroke: 5px rgba(206, 206, 251, 0.5);
+  -webkit-text-stroke: 5px rgba(230, 230, 250, 0.5); /* Soft lavender stroke */
   font-size: 190px;
   font-family: "Bebas Neue", sans-serif;
 }
