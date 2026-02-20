@@ -74,7 +74,7 @@ MIT License - see [LICENSE](LICENSE) file.
 ---
 
 ## 👨‍💻 Contact
-Made with ❤️ by [@whynotramaa](https://github.com/whynotramaa)
+Made with ❤️ by [@whynotramaa](https://github.com/whynotramaa) and [@Rikit1121](https://github.com/Rikit1121)
 
 **Connect:**
 - GitHub: [@whynotramaa](https://github.com/whynotramaa)
