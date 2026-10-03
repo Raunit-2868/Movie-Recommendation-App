@@ -1,85 +1,75 @@
 # 🎬 MovieFlix & Chill
-**Movie Recommender**  
-[🔗 Live Site](https://movie-flix-chill.vercel.app/)
+
+### Movie Recommendation & Discovery Platform
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-red?style=for-the-badge)](https://movie-flix-chill.vercel.app/)
+
+Discover movies, search for your favorite titles, explore trending searches, and browse movie information through a modern and responsive React application powered by the TMDB API and Appwrite.
 
 ![UI Screenshot](./screenshot.png)
-![UI Screenshot 2](./screenshot1.png)
 
-Discover your next favorite film with ease. Powered by AI and real-time data, **MovieFlix & Chill** delivers personalized movie recommendations with infinite scrolling, trailer playback, and smart search functionality.
+![UI Screenshot 2](./screenshot1.png)
 
 ---
 
 ## 🚀 Features
-- **Trending Recommendations** – Discover movies that people are searching about
-- **Infinite Scroll Search** – Seamlessly browse through endless movie results
-- **Trailer Playback** – Watch movie trailers directly in the app
-- **Debounced Search** – Optimized search without API flooding
-- **Trending Movies** – Real-time trending data via Appwrite
-- **Responsive Design** – Perfect on all devices
+
+- 🎬 **Movie Discovery** – Browse popular and trending movies using real-time TMDB data.
+- 🔎 **Movie Search** – Search for movies and get results dynamically.
+- ⚡ **Debounced Search** – Reduces unnecessary API requests while searching.
+- 📈 **Trending Searches** – Tracks popular search terms using Appwrite TablesDB.
+- 🔄 **Dynamic Search Analytics** – Search counts are stored and updated in Appwrite.
+- 📱 **Responsive Design** – Optimized for desktop, tablet, and mobile devices.
+- ⭐ **Movie Information** – View movie posters, ratings, release dates, language, and other metadata.
+- ⚡ **Fast Development** – Built with Vite for fast development and optimized production builds.
 
 ---
 
 ## 🛠️ Tech Stack
-- **Vite** – Lightning-fast build tool
-- **React** – Component-based UI library
-- **Tailwind CSS** – Utility-first styling
-- **TMDB API** – Movie data and trailers
-- **Appwrite** – Backend for tracking trends
+
+### Frontend
+
+- **React 19** – Component-based user interface
+- **Vite** – Frontend build tool and development server
+- **Tailwind CSS 4** – Responsive and utility-first styling
+- **JavaScript (ES6+)** – Application logic
+
+### APIs & Backend
+
+- **TMDB API** – Movie data, search results, posters, ratings, and metadata
+- **Appwrite** – Backend-as-a-Service
+- **Appwrite TablesDB** – Stores and manages search analytics
+
+### Development Tools
+
+- **Git** – Version control
+- **GitHub** – Source code hosting
+- **ESLint** – Code quality and linting
 
 ---
 
-## 🏃‍♂️ Quick Start
+## 🏗️ Application Architecture
 
-1. **Clone & Install**
-   ```bash
-   git clone https://github.com/whynotramaa/movie-recommendation.git
-   cd movie-recommendation
-   npm install
-   ```
-
-2. **Environment Setup**
-   Create `.env` file:
-   ```env
-   VITE_TMDB_API_KEY=your_tmdb_api_key
-   VITE_APPWRITE_ENDPOINT=https://your-appwrite-endpoint
-   VITE_APPWRITE_PROJECT_ID=your_project_id
-   ```
-
-3. **Run Locally**
-   ```bash
-   npm run dev
-   ```
-
----
-
-## 🎯 Usage
-- **Search**: Type any movie name for instant results with infinite scroll
-- **Watch Trailers**: Click the play button on any movie card
-- **Explore Trends**: Browse what's currently popular
-- **Detailed Info**: View ratings, descriptions, and release dates
-
-
-
-## 🤝 Contributing
-1. Fork the repo
-2. Create feature branch: `git checkout -b feature-name`
-3. Commit changes: `git commit -m "Add feature"`
-4. Push & create pull request
-
----
-
-## 📄 License
-MIT License - see [LICENSE](LICENSE) file.
-
----
-
-## 👨‍💻 Contact
-Made with ❤️ by [@whynotramaa](https://github.com/whynotramaa) and [@Rikit1121](https://github.com/Rikit1121)
-
-**Connect:**
-- GitHub: [@whynotramaa](https://github.com/whynotramaa)
-- Issues: [Open an issue](https://github.com/whynotramaa/movie-recommendation/issues)
-
----
-
-⭐ **Star this repo if you found it helpful!**
+```text
+                         ┌─────────────────┐
+                         │      User       │
+                         └────────┬────────┘
+                                  │
+                                  ▼
+                       ┌────────────────────┐
+                       │   React Frontend   │
+                       │                    │
+                       │ Search / UI /      │
+                       │ Movie Components   │
+                       └─────────┬──────────┘
+                                 │
+                    ┌────────────┴────────────┐
+                    │                         │
+                    ▼                         ▼
+           ┌─────────────────┐       ┌─────────────────┐
+           │    TMDB API     │       │    Appwrite     │
+           │                 │       │    TablesDB     │
+           │ Movie Data      │       │                 │
+           │ Search          │       │ Search Counts   │
+           │ Posters         │       │ Analytics       │
+           └─────────────────┘       └─────────────────┘
